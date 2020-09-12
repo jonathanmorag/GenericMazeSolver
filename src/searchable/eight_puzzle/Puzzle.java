@@ -5,22 +5,10 @@ import java.util.Arrays;
 public class Puzzle {
 
     int[][] mat;
-    int moves;
 
     public Puzzle(int[][] mat) {
         this.mat = mat;
-        this.moves = 0;
     }
-
-    public Puzzle(int[][] mat, int moves) {
-        this.mat = mat;
-        this.moves = moves;
-    }
-
-    public int getMoves() {
-        return moves;
-    }
-
 
     @Override
     public boolean equals(Object o) {
@@ -40,7 +28,7 @@ public class Puzzle {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        for(int[] arr : mat) {
+        for (int[] arr : mat) {
             sb.append(Arrays.toString(arr)).append("\n");
         }
         sb.append("***********");
