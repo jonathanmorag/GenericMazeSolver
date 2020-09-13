@@ -37,23 +37,19 @@ public class EightPuzzle implements Searchable<Puzzle> {
     }
 
     public static boolean isSolvable(Puzzle p) {
-        int[] list = new int[8];
+        int[] vec = new int[9];
         int i = 0;
-        for (int[] arr : p.mat) {
-            for (int a : arr) {
-                if (a != -1) {
-                    list[i++] = a;
-                }
-            }
-        }
+
+        for (int[] arr : p.mat)
+            for (int a : arr)
+                vec[i++] = a;
 
         int inversions = 0;
 
-        for (i = 0; i < 7; i++) {
-            for (int j = i + 1; j < 7; j++) {
-                if (list[j] > list[i]) {
+        for (i = 0; i < 8; i++) {
+            for (int j = i + 1; j < 9; j++) {
+                if (vec[i] != -1 && vec[j] != -1 && vec[i] > vec[j])
                     inversions++;
-                }
             }
         }
 
@@ -138,9 +134,9 @@ public class EightPuzzle implements Searchable<Puzzle> {
 
     public static void main(String[] args) {
         int[][] mat = {
-                {8, 1, 2},
-                {-1, 4, 3},
-                {7, 6, 5}
+                {2, 1, 3},
+                {4, 5, 6},
+                {7, 8, 0}
         };
 
         System.out.println(isSolvable(new Puzzle(mat)));   // should be false

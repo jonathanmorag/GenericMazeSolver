@@ -36,9 +36,9 @@ public class MainTrain {
         /* ------------------------------- EIGHT-PUZZLE ------------------------------- */
 
         int[][] eightPuzzleMat = {
-                {1, 8, 2},
-                {-1, 4, 3},
-                {7, 6, 5}
+                {-1, 1, 3},
+                {4, 2, 5},
+                {7, 8, 6}
         };
 
         Searchable<Puzzle> puzzle = new EightPuzzle(eightPuzzleMat);
