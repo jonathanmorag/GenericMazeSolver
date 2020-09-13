@@ -3,22 +3,16 @@ package searcher;
 import searchable.Searchable;
 import state.State;
 
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
-import java.util.PriorityQueue;
+import java.util.*;
+
 
 public class BestFirstSearch<T> extends CommonSearcher<T> {
-
-    public BestFirstSearch() {
-        openList = null;
-    }
 
     @Override
     public List<State<T>> search(Searchable<T> s) {
         openList = new PriorityQueue<>(Comparator.comparingDouble(State::getCost));
         openList.add(s.getInitialState());
-        HashSet<State<T>> closedSet = new HashSet<>();
+        closedSet = new HashSet<>();
 
         while (openList.size() > 0) {
             State<T> n = openList.poll();
@@ -48,7 +42,7 @@ public class BestFirstSearch<T> extends CommonSearcher<T> {
                 }
             }
         }
-
-        return null;
+        System.out.println("BEST FIRST SEARCH: No solution");
+        return new ArrayList<>();
     }
 }

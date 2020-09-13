@@ -44,7 +44,7 @@ public class State<T> {
     }
 
     public boolean hasCameFrom() {
-        return this.getCameFrom() != null;
+        return cameFrom != null;
     }
 
     public static <T> List<State<T>> backtrace(State<T> s) {

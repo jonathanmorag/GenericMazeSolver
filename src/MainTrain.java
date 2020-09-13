@@ -3,8 +3,7 @@ import searchable.eight_puzzle.EightPuzzle;
 import searchable.eight_puzzle.Puzzle;
 import searchable.matrix.Matrix;
 import searchable.matrix.Position;
-import searcher.BestFirstSearch;
-import searcher.Searcher;
+import searcher.*;
 import solvers.EightPuzzleSolver;
 import solvers.MatrixSolver;
 
@@ -27,7 +26,7 @@ public class MainTrain {
 
         Searchable<Position> matrix = new Matrix(mat, start, end);
 
-        new MatrixSolver(new BestFirstSearch<>())
+        new MatrixSolver(new DFS<>())
                 .solve(matrix)
                 .forEach(System.out::println);
 

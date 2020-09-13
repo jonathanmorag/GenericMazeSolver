@@ -84,6 +84,8 @@ public class EightPuzzle implements Searchable<Puzzle> {
             }
         }
 
+        // check boundaries for possible inversions
+
         if (isInBounds(newI - 1, newJ)) {
             int[][] tempMat = new int[3][3];
             for (int i = 0; i < 3; i++) {
