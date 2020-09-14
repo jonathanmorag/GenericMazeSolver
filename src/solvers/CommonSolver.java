@@ -5,11 +5,11 @@ import searcher.Searcher;
 import state.State;
 import java.util.List;
 
-public class MazeSolver<T> implements Solver<Searchable<T>, List<State<T>>> {
+public class CommonSolver<T> implements Solver<Searchable<T>, List<State<T>>> {
 
     Searcher<T> searcher;
 
-    public MazeSolver(Searcher<T> searcher) {
+    public CommonSolver(Searcher<T> searcher) {
         this.searcher = searcher;
     }
 

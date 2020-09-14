@@ -8,7 +8,7 @@ import state.State;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EightPuzzleSolver extends MazeSolver<Puzzle> {
+public class EightPuzzleSolver extends CommonSolver<Puzzle> {
 
     public EightPuzzleSolver(Searcher<Puzzle> searcher) {
         super(searcher);

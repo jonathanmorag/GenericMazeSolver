@@ -1,11 +1,7 @@
 import searchable.*;
-import searchable.eight_puzzle.EightPuzzle;
-import searchable.eight_puzzle.Puzzle;
-import searchable.matrix.Matrix;
-import searchable.matrix.Position;
+import searchable.word_game.WordGame;
 import searcher.*;
-import solvers.EightPuzzleSolver;
-import solvers.MatrixSolver;
+import solvers.WordGameSolver;
 
 public class MainTrain {
 
@@ -32,8 +28,9 @@ public class MainTrain {
 
         */
 
-        /* ------------------------------- EIGHT-PUZZLE ------------------------------- */
+        /* ---------------------------------- EIGHT-PUZZLE ---------------------------------- */
 
+        /*
         int[][] eightPuzzleMat = {
                 {-1, 1, 3},
                 {4, 2, 5},
@@ -47,5 +44,17 @@ public class MainTrain {
         new EightPuzzleSolver(new BestFirstSearch<>())
                 .solve(puzzle)
                 .forEach(System.out::println);
+
+         */
+
+        /* ------------------------------------ WORD GAME ------------------------------------ */
+
+        Searchable<String> wordGame = new WordGame("aecdb", "abcde");
+
+        new WordGameSolver(new BFS<>())
+                .solve(wordGame)
+                .forEach(System.out::println);
     }
+
+
 }
