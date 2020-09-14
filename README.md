@@ -12,7 +12,7 @@ In our project, we're able to solve any searchable problem that meets requiremen
 information in runtime.
 In fact, this is a bi-directional strategy pattern thanks to this project's flexibility - we can choose any algorithm to solve any searchable problem
 (as long as they implement its respectively interfaces).
-So, in runtime we could change the behavior of the solution by injecting a new problem, and as well we save duplicate code problems through interfaces and inheritance.
+So, in runtime we could change the behavior of the solution by injecting a new problem, and as well we save duplicate code issues through interfaces and inheritance.
 </p>
 <h2>Eight Puzzle Solution Example</h2>
 <p>
